@@ -15,7 +15,15 @@ public class TodoList {
     }
 
     public String getTasks(ArrayList<Task> todoList){
-        return "Todo list is empty";
+        return "Todo list is empty.";
+    }
+
+    public String changeStatus(String taskName){
+        return "Task status changed.";
+    }
+
+    public String getCompletedTasks(ArrayList<Task> todoList){
+        return "No completed tasks in todo list.";
     }
 
 }
