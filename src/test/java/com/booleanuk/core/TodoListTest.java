@@ -42,17 +42,34 @@ class TodoListTest {
     @Test
     public void testGetCompletedTasks() {
         TodoList todoList = new TodoList();
-        Assertions.assertEquals("No completed tasks in todo list.", todoList.getCompletedTasks(todoList.todoList));
-
 
         todoList.addTask("Test task 1");
         todoList.addTask("Test task 2");
         todoList.addTask("Test task 3");
+        Assertions.assertEquals("No completed tasks in todo list.", todoList.getCompletedTasks(todoList.todoList));
 
         todoList.changeStatus("Test task 1");
 
-
         Assertions.assertEquals("[Test task 1]", todoList.getCompletedTasks(todoList.todoList));
+    }
+
+    @Test
+    public void testGetUncompletedTasks() {
+        TodoList todoList = new TodoList();
+
+        todoList.addTask("Test task 1");
+        todoList.changeStatus("Test task 1");
+
+        Assertions.assertEquals("No uncompleted tasks in todo list.", todoList.getUncompletedTasks(todoList.todoList));
+
+        todoList.addTask("Test task 2");
+        todoList.addTask("Test task 3");
+
+        ArrayList<String> test = new ArrayList<>();
+        test.add("Test task 2");
+        test.add("Test task 3");
+
+        Assertions.assertEquals(test.toString(), todoList.getUncompletedTasks(todoList.todoList));
     }
 
 

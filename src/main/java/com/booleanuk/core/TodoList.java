@@ -26,4 +26,8 @@ public class TodoList {
         return "No completed tasks in todo list.";
     }
 
+    public String getUncompletedTasks(ArrayList<Task> todoList){
+        return "No uncompleted tasks in todo list.";
+    }
+
 }
