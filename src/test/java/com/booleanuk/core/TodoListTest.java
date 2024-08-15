@@ -35,7 +35,7 @@ class TodoListTest {
     public void testChangeStatus() {
         TodoList todoList = new TodoList();
         todoList.addTask("Test task 1");
-        Assertions.assertEquals("Task status changed", todoList.changeStatus("Test task 1"));
+        Assertions.assertEquals("Task status changed.", todoList.changeStatus("Test task 1"));
 
     }
 
@@ -84,6 +84,34 @@ class TodoListTest {
 
 
         Assertions.assertEquals("[Test task 1]", todoList.searchTask("Test task 1"));
+    }
+
+    @Test
+    public void testRemoveTask() {
+        TodoList todoList = new TodoList();
+
+        Assertions.assertEquals("Task not found.", todoList.removeTask("Test task 1"));
+
+        todoList.addTask("Test task 1");
+        todoList.addTask("Test task 2");
+        todoList.addTask("Test task 3");
+
+
+        Assertions.assertEquals("Task removed from todo list.", todoList.removeTask("Test task 1"));
+    }
+
+    @Test
+    public void testRemoveTask() {
+        TodoList todoList = new TodoList();
+
+        Assertions.assertEquals("Task not found.", todoList.removeTask("Test task 1"));
+
+        todoList.addTask("Test task 1");
+        todoList.addTask("Test task 2");
+        todoList.addTask("Test task 3");
+
+
+        Assertions.assertEquals("Task removed from todo list.", todoList.removeTask("Test task 1"));
     }
 
 

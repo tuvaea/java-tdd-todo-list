@@ -34,4 +34,8 @@ public class TodoList {
         return "Task not found.";
     }
 
+    public String removeTask(String taskName){
+        return "Task not found.";
+    }
+
 }
