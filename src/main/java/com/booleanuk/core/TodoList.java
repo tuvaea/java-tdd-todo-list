@@ -30,4 +30,8 @@ public class TodoList {
         return "No uncompleted tasks in todo list.";
     }
 
+    public String searchTask(String taskName){
+        return "Task not found.";
+    }
+
 }

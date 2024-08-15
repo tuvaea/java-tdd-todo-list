@@ -72,6 +72,20 @@ class TodoListTest {
         Assertions.assertEquals(test.toString(), todoList.getUncompletedTasks(todoList.todoList));
     }
 
+    @Test
+    public void testSearchTask() {
+        TodoList todoList = new TodoList();
+
+        Assertions.assertEquals("Task not found.", todoList.searchTask("Test task 1"));
+
+        todoList.addTask("Test task 1");
+        todoList.addTask("Test task 2");
+        todoList.addTask("Test task 3");
+
+
+        Assertions.assertEquals("[Test task 1]", todoList.searchTask("Test task 1"));
+    }
+
 
 
 }
