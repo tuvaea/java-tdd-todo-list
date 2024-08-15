@@ -38,4 +38,12 @@ public class TodoList {
         return "Task not found.";
     }
 
+    public String getTasksAscending(){
+        return "Todo list is empty.";
+    }
+
+    public String getTasksDescending(){
+        return "Todo list is empty.";
+    }
+
 }

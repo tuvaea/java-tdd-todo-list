@@ -101,19 +101,39 @@ class TodoListTest {
     }
 
     @Test
-    public void testRemoveTask() {
+    public void testGetTasksAscending() {
         TodoList todoList = new TodoList();
 
-        Assertions.assertEquals("Task not found.", todoList.removeTask("Test task 1"));
+        Assertions.assertEquals("Todo list is empty.", todoList.getTasksAscending());
 
-        todoList.addTask("Test task 1");
-        todoList.addTask("Test task 2");
-        todoList.addTask("Test task 3");
+        todoList.addTask("C task 1");
+        todoList.addTask("A task 2");
+        todoList.addTask("F task 3");
 
+        ArrayList<String> test = new ArrayList<>();
+        test.add("A task 2");
+        test.add("C task 2");
+        test.add("F task 2");
 
-        Assertions.assertEquals("Task removed from todo list.", todoList.removeTask("Test task 1"));
+        Assertions.assertEquals(test.toString(), todoList.getTasksAscending());
     }
 
+    @Test
+    public void testGetTasksDescending() {
+        TodoList todoList = new TodoList();
 
+        Assertions.assertEquals("Todo list is empty.", todoList.getTasksDescending());
+
+        todoList.addTask("C task 1");
+        todoList.addTask("A task 2");
+        todoList.addTask("F task 3");
+
+        ArrayList<String> test = new ArrayList<>();
+        test.add("F task 2");
+        test.add("C task 2");
+        test.add("A task 2");
+
+        Assertions.assertEquals(test.toString(), todoList.getTasksDescending());
+    }
 
 }
