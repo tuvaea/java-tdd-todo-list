@@ -34,7 +34,7 @@
 
 | Method                          | Scenario                                                                            | Output                                                                                    |
 |---------------------------------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| `addTask(task)`                 | Task is added to todoList<br/>Task is not added to todoList                         | `Return` true<br/>`Return` false                                                          |
+| `addTask(String)`               | Task is added to todoList<br/>Task is not added to todoList                         | `Return` true<br/>`Return` false                                                          |
 | `getTasks(todoList)`            | todoList is not empty<br/>todoList is empty                                         | `Return` all tasks in todo list<br/>`Return` "Todo list is empty."                        |
 | `getCompletedTasks(todoList)`   | todoList contains completed tasks<br/>todoList does not contain completed tasks     | `Return` tasks with status 'complete'<br/>`Return` "No completed tasks in todo list."     |
 | `getIncompletedTasks(todoList)` | todoList contains uncompleted tasks<br/>todoList does not contain uncompleted tasks | `Return` tasks with status 'incomplete'<br/>`Return` "No uncompleted tasks in todo list." |
